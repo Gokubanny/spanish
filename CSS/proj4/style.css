@@ -1,0 +1,31 @@
+body {
+    background-color: #FFF481 !important;
+}
+
+.navbar {
+    --bs-navbar-padding-x: 2rem;
+}
+
+.navbar-collapse {
+    padding: 0px 0 0 27rem;
+}
+.row{
+    margin: 1cm 0 2cm 3cm !important
+}
+.search{
+    height: 1.2cm;
+    margin-top: 1cm;
+}
+.btn1{
+    width: 6cm !important;
+}
+.footer{
+    background-color: black;
+    color: #fff;
+    height: 5cm;
+    padding: 7px 0 0 0;
+}
+.btn2{
+    width: 4cm;
+    margin: 0 0 0 7cm;
+}
