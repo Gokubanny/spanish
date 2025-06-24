@@ -1,0 +1,514 @@
+body {
+    margin: 0%;
+}
+
+.navbar {
+    background: none !important;
+    margin: 10px 1.5cm;
+}
+
+.navbar-nav {
+    margin: 0 5cm 0 10cm !important;
+}
+
+.nav-item {
+    margin: 10px 15px;
+}
+
+.btn {
+    background-color: #EA6D27 !important;
+    border: none;
+    color: white;
+    width: 3.5cm;
+    height: 48px;
+    border-radius: 12px 0px;
+    font-size: 14px;
+    font-family: math;
+}
+
+.btn:hover {
+    background-color: #000 !important;
+    color: #EA6D27;
+}
+
+.btn1:hover {
+    background-color: #EA6D27 !important;
+    color: #000;
+}
+
+.view {
+    width: 120px;
+    height: 198px;
+    margin: 0 2cm;
+}
+
+text {
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 10px;
+    fill: black;
+}
+
+.lik {
+    width: 12cm;
+    height: 12cm;
+    margin: -3.7cm 0 0 -8.6cm;
+}
+
+.like {
+    width: 12cm;
+    height: 14cm;
+    margin: -7.5cm 0 0 -11.1cm;
+}
+
+.like1 {
+    width: 16cm;
+    height: 19cm;
+    margin: -8.5cm 0 0 -14cm;
+}
+
+.leaf {
+    margin: -2cm 0 0 4cm;
+    opacity: 0.5;
+}
+
+.leafs {
+    margin: -1cm 0 0 2cm;
+    opacity: 0.5;
+}
+
+.leaf1 {
+    margin: 0 0 0 30cm;
+    opacity: 0.5;
+}
+
+.con {
+    margin: -10.6cm 2cm 6cm;
+}
+
+.you h1 {
+    font-size: 1.4cm;
+    font-family: math;
+}
+
+.btn1 {
+    background: black !important;
+    margin: 0 1cm 0 0;
+    width: 2.7cm !important;
+}
+
+.social-icons {
+    margin: 1.2cm -11px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.lin {
+    height: 2px;
+    background-color: black;
+    width: 2.6cm;
+    margin: -32px 3.9cm;
+}
+
+.dish-1 {
+    height: 580px;
+    margin: -5cm 3cm;
+    width: 380px;
+}
+
+.dish-2 {
+    margin: -3.5cm -1.2cm;
+    height: 300px;
+    width: 280px;
+}
+
+.hold {
+    background: rgb(228, 226, 226);
+    margin: 5cm 0 0;
+    height: 44cm;
+    padding: 2cm 0;
+}
+
+.hold h1 {
+    text-align: center;
+}
+
+.hold p {
+    margin: 0.8cm 0 0 15.7cm;
+}
+
+.leaf2 {
+    margin: 0 0 -4cm 11cm;
+    opacity: 0.5;
+}
+
+.leaf3 {
+    opacity: 0.5;
+    margin: 0 0 -4cm 9cm;
+}
+
+.card {
+    margin: 4cm 2cm;
+    width: 11rem;
+    border-radius: 30px 10px;
+    background: none !important;
+    border: #fff solid 1px;
+}
+
+.oil {
+    background-color: #fff !important;
+}
+
+.card-img-top {
+    margin: -2cm 0.6cm;
+    width: 130px;
+}
+
+.card-body {
+    margin: 2cm 0 0;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    margin: 11px 0 0 !important;
+    font-size: 10px;
+}
+
+.price {
+    margin: -1cm 2.6cm;
+    width: 90px;
+}
+
+.onoin {
+    opacity: 0.1;
+    width: 70px;
+    height: 70px;
+    margin: 0 0 -19cm 8.5cm;
+}
+
+.gal {
+    margin: 0 0 -19.7cm 21cm;
+    width: 70px;
+}
+
+.garlic {
+    margin: 0 0 -18.9cm 34cm;
+    width: 90px;
+}
+
+.root {
+    margin: -2cm 0 0 17cm;
+}
+
+.group {
+    margin: 0 0 -5cm 21cm;
+    opacity: 0.5;
+    width: 180px;
+}
+
+.nice {
+    margin: 0 0 -17cm 30.9cm;
+}
+
+.gal1 {
+    margin: 0 0 -17cm 17cm;
+}
+
+.gar1 {
+    margin: 0 0 -19cm 1cm;
+}
+
+.omo {
+    margin: -3cm 5cm 0;
+}
+
+.tor {
+    margin: -1cm 0 0 -14cm;
+}
+
+.vec {
+    margin: 11cm 0 0 0;
+}
+
+.green {
+    margin: -23cm 0 0 10cm;
+}
+
+.spag {
+    width: 500px;
+}
+
+.provide {
+    margin: 3cm 0;
+}
+
+.provide h1 {
+    font-size: 1.2cm;
+    font-family: none;
+    font-weight: 600;
+}
+
+.provide p {
+    margin: 1cm 0 0 2.8cm;
+}
+
+.provide button {
+    margin: 1.2cm -2.6cm 0 3cm;
+}
+
+.gal2 {
+    margin: 0 0 -5cm -1.2cm;
+}
+
+.garlic1 {
+    width: 200px;
+    margin: 1cm 0 -3cm;
+}
+
+.chef {
+    margin: 0 3cm 0 2cm;
+}
+
+.chef h1 {
+    font-family: emoji;
+    font-weight: 600;
+}
+
+.fa-solid {
+    font-size: 20px;
+}
+
+table p {
+    margin: -32px 25px 0;
+    font-size: 14px;
+    padding: 0 0 1cm;
+    letter-spacing: 0px;
+}
+
+.form {
+    margin: -1cm 0 0 2cm;
+}
+
+.guy {
+    margin: -1cm 0;
+}
+
+.tain {
+    margin: 5cm 0 0;
+    background: #F3F4F4;
+    border: 2px solid gray;
+}
+
+.our {
+    margin: -2cm 12cm 2cm;
+}
+
+.our h1 {
+    font-size: 1.4cm;
+}
+
+.our p {
+    text-align: center;
+}
+
+.pan {
+    margin: 1.5cm 0 -20cm;
+    width: 14cm;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    color: black;
+    display: flex;
+    gap: 30px;
+    animation: slideLeft 25s linear infinite;
+    padding: 40px 0;
+    width: max-content;
+}
+
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 40px 15px;
+    padding: 20px;
+    width: 450px;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0px 0px 8px -4px gray;
+    transition: transform -3.1s;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    margin: -1.7cm 0 0.4cm;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.get {
+    color: #fff;
+}
+
+.get img {
+    height: 8cm;
+    margin: 4cm 8cm -8cm;
+}
+
+.lass {
+    margin: 2cm 0 -2cm;
+    text-align: center;
+}
+
+.lass h1 {
+    font-family: auto;
+    margin: 0 0 17px;
+}
+
+.lass input {
+    width: 11cm;
+    height: 1.6cm;
+    border-radius: 11px;
+    padding: 19px;
+}
+
+.btn2 {
+    background-color: #EA6D27 !important;
+    border: none;
+    color: white;
+    width: 3cm;
+    height: 44px;
+    border-radius: 11px;
+    margin: 0 0 0 -3.4cm;
+    font-size: 16px;
+}
+
+footer {
+    margin: 6cm 0 0;
+}
+
+.inn {
+    margin: -14cm 0;
+}
+
+.aim {
+    margin: 4cm 5cm 0.5cm;
+    background: url(pan2.png);
+    background-repeat: no-repeat;
+    height: 18cm;
+}
+
+.aim h5 {
+    font-weight: 800;
+    font-size: 19px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.aim p {
+    font-size: 16px;
+    margin: 14px 0;
+    font-family: sans-serif;
+    color: grey;
+}
+
+.bat {
+    margin: 0 !important;
+}
+
+.dab {
+    margin: 2px 0 -3px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: grey;
+}
+
+.hour {
+    margin: 0 5.3cm;
+}
+
+.hour h5 {
+    font-weight: 800;
+    font-size: 19px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: grey;
+}
+
+.all {
+    margin: 2cm 4.9cm 3cm;
+}
+
+.sign {
+    margin: 0 5cm;
+}
+
+.sign1 {
+    margin: 0 -5cm;
+}
+
+.all p,
+a {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: grey;
+    text-decoration: none;
+}
+
+.marv {
+    color: black;
+    font-weight: 600;
+}
+
+.lin1 {
+    height: 2px;
+    width: 74%;
+    background: gray;
+    margin: 1.5cm 5cm -0.7cm;
+}
+
+.ann {
+    margin: -24cm 0 -10cm 11cm;
+    width: 24cm;
+}

@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 20px 1cm;
+    /* background: radial-gradient(circle, #09a9a9 40%, #052c2c 60%); */
+    background: radial-gradient(77.44% 77.44% at 50% 22.56%, #0A2C2C 0%, #0D0D0D 82.72%);
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 4cm;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.navbar h3 {
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0%;
+}
+
+.nav-item {
+    display: flex;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.nav-item a {
+    color: #FFFFFF;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.nav-item button {
+    /* background-color: #00406C; */
+    background: #1D3131;
+    height: 2.5rem;
+    width: 3cm;
+    border-radius: 10px;
+    border: solid #93AFBDA1 1px;
+    box-shadow: 4px 4px 9.9px 0px #0D0D0D inset;
+    color: #FFFFFF;
+    margin-top: -11px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.future {
+    color: #fff;
+    text-align: center;
+}
+
+.future h1 {
+    font-size: 1.6cm;
+    width: 18cm;
+    margin: 20px 10cm;
+}
+
+.future button {
+    background: #1D3131;
+    height: 2.5rem;
+    width: 3cm;
+    border-radius: 10px;
+    border: solid #93AFBDA1 1px;
+    box-shadow: 4px 4px 9.9px 0px #0D0D0D inset;
+    color: #FFFFFF;
+    margin: 12px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.future img {
+    transform: rotateY(200deg);
+    width: 600px;
+}
+
+.meet {
+    /* background-color: #0D0D0D; */
+    width: 105%;
+    margin: -35px;
+    color: #fff;
+}
+
+.meet h1 {
+    font-size: 1.4cm;
+    text-align: center;
+    margin: 3cm 0 8px;
+}
+
+.meet p {
+    text-align: center;
+}
+
+.con {
+    margin: 38px;
+}
+
+.coner {
+    font-size: 22px;
+    margin: -19px 59px;
+}
+
+.rat {
+    margin: 5cm 0;
+    color: #fff;
+    text-align: center;
+}
+
+.rat h1 {
+    font-size: 47px;
+}
+
+.cat img {
+    border-radius: 30px;
+    margin: 2cm 19px;
+}
+
+.car {
+    display: flex;
+    justify-content: center;
+    margin: -1.5cm 0;
+}
+
+.car img {
+    border-radius: 30px;
+    margin: 10px 15px;
+}
+
+.see a {
+    color: #1EC3C3;
+    position: relative;
+    top: 1.6cm;
+    font-size: 17px;
+}
+
+.dat {
+    color: #fff;
+}
+
+.say {
+    text-align: center;
+}
+
+.nail {
+    border: solid #1EC3C380 1px;
+    width: 11cm !important;
+    /* height: 3.6cm; */
+}
+
+.nail1 {
+    border: solid #1EC3C380 1px;
+    margin: 0 30px;
+    width: 11cm !important;
+    height: 3.6cm;
+}
+
+.nail2 {
+    border: solid #1EC3C380 1px;
+    width: 11cm !important;
+    height: 3.6cm;
+}
+.nat{
+    margin: 1cm;
+}
+.nail3 {
+    border: solid #1EC3C380 1px;
+    margin: 0 0.8cm 0 6cm;
+    width: 11cm !important;
+    height: 3.6cm;
+}
+.nail4{
+    border: solid #1EC3C380 1px;
+    width: 11cm !important;
+}
+.star {
+    color: gold;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.ella1{
+    margin: -19px 0 10px 7.5cm;
+}
+
+.ella{
+    margin: 0 0 0 8cm;
+}
+.ella2{
+    margin: 0 0 10px 7.5cm;
+}
+
+footer{
+    margin: 5cm 0;
+}
+footer h3{
+    color: #fff;
+}
+.drive{
+    color: #fff;
+    text-align: center;
+}
+.drive h1{
+font-size: 45px;
+}
+.drive button {
+    background: #1D3131;
+    height: 2.5rem;
+    width: 3cm;
+    border-radius: 10px;
+    border: solid #93AFBDA1 1px;
+    box-shadow: 4px 4px 9.9px 0px #0D0D0D inset;
+    color: #FFFFFF;
+    margin: 1cm -1cm 0 2.3cm;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.vector{
+    margin: 0 0 -1.6cm 1cm;
+}
+.lin{
+    height: 1px;
+    background-color: #1EC3C380;
+    width: 90%;
+    margin: 5cm 2cm 1cm;
+}
+.soc{
+    margin: 0 17cm;
+}
+.soc h3{
+    font-size: 40px;
+}
+.social-icons{
+    margin: 0 18px;
+}
+.social-icons a {
+    color: #1EC3C3;
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+
+  .social-icons a:hover {
+    color: #fff;
+  }
