@@ -1,0 +1,223 @@
+body{
+    background-color: #221F1F;
+}
+
+/* NAVBAR */
+.navbar-brand {
+    color: #FFFFFF;
+    font-family: cursive;
+}
+
+.ban{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: cursive;
+    font-size: 21px;
+    padding: 0 5px 0 0;
+    margin: 0 0 0 2cm;
+    font-weight: 600;
+}
+
+.navbar-nav{
+    margin: 0 0 0 12cm;
+    font-size: 20px;
+}
+
+.nav-link{
+    color: #FFFFFF !important;
+    font-family: cursive;
+}
+
+.d-flex {
+ margin: 0 2cm;
+}
+
+.icon{
+    font-size: 35px;
+}
+
+/* HOME */
+.nate{
+    margin: 2cm 3cm;
+}
+
+.marv{
+    margin: 3cm 0;
+    color: #A6BBCC;
+}
+
+.marv p{
+    font-size: 25px;
+}
+
+.marv h1{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.marv a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #A6BBCC;
+}
+
+.lin {
+    height: 2px;
+    background-color: #A6BBCC;
+    width: 2.6cm;
+}
+
+.pic img{
+    border-radius: 30px;
+}
+
+.insta{
+    display: grid;
+    align-content: center;
+}
+
+.met h2{
+    color: #A6BBCC;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 3cm;
+}
+
+.met p{
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 0 0 25px 6cm;
+}
+
+.lin1 {
+    height: 3px;
+    background-color: #A6BBCC;
+    width: 60%;
+    margin: -31px 0 1cm 8.5cm
+}
+
+.kat{
+    margin: 1cm 4cm;
+    color: #FFFFFF;
+}
+
+.kat h1{
+    font-family: SpaceGrotesk;
+    font-weight: 600;
+}
+
+.front p{
+        margin: 0 24px 1rem;
+}
+.lin2 {
+    height: 2px;
+    background-color: #A6BBCC;
+    width: 35%;
+    margin: -11px 18px;
+   
+}
+
+.back p{
+    margin: 0 12px 1rem;
+}
+
+.lin3 {
+    height: 2px;
+    background-color: #A6BBCC;
+    width: 39%;
+    margin: -11px 6px;
+   
+}
+
+.data p{
+    margin: 0 4px 1rem;
+}
+
+.lin4 {
+    height: 2px;
+    background-color: #A6BBCC;
+    width: 40%;
+    margin: -11px 2px;
+}
+
+.dd{
+    margin: 2cm 13% 0;
+}
+
+.pac{
+    color: #FFFFFF;
+}
+
+.pac h3{
+    margin: 22px 0 1px;
+    font-family: SpaceGrotesk;
+    font-weight: 500;
+    font-size: 25px;
+}
+.pace{
+    display: flex;
+    font-weight: 400;
+}
+
+.css{
+    margin: 0 21px;
+}
+
+.lin5 {
+    height: 3px;
+    background-color: #A6BBCC;
+    width: 50%;
+    margin: -31px 0 1cm 12.5cm;
+}
+
+.contact{
+    margin: 1cm 0 0;
+}
+
+.contact h2{
+    color: #A6BBCC;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 3cm;
+}
+
+.contact p{
+    color: #FFFFFF;
+    font-size: 19px;
+    margin: 1.3cm 0 20px 9cm;
+}
+
+.contact input{
+    border-style: none none solid none;
+    background: transparent;
+    width: 15cm;
+    height: 3cm;
+    margin: 10px 10cm;
+    border-bottom-width: 3px;
+    border-color: #A6BBCC;
+    color: #A6BBCC;
+    font-size: 15px;
+}
+
+button{
+    background: transparent;
+    border-style: none none solid none;
+    margin: 2cm 15cm;
+    color: #ffffff;
+    border-color: #A6BBCC;
+    height: 1.5cm;
+    width: 5cm;
+    font-family: math;
+}
+
+footer{
+    margin: 0 2cm 1cm;
+}
+
+.mar{
+    font-size: 20px;
+}
+
+.git{
+    margin: -1cm 0 0 28cm;
+}
