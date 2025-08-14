@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing Card Component Demo</title>
+  <style>
+    /* Page styles for demo only */
+    :root {
+      --page-bg: #f6f7fb;
+      --text-color: #0f172a;
+      --muted: #475569;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text-color);
+      background: var(--page-bg);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 { font-size: 1.25rem; margin: 0 0 16px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+    .note { color: var(--muted); font-size: .95rem; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Pricing Card Component</h1>
+    <p class="note">Reusable Web Component with attributes: <code>title</code>, <code>price</code>, <code>features</code> (JSON or comma list), and <code>cta-text</code>. Emits <code>pricing-card:cta</code> on click.</p>
+
+    <div class="grid" id="app">
+      <!-- Demo instances will render below -->
+
+      <pricing-card id="basic"
+        title="Basic Plan"
+        price="$9.99 / month"
+        cta-text="Start Trial"
+        features='["1 GB Storage","Basic Support","All Core Features"]'>
+      </pricing-card>
+
+      <pricing-card id="pro"
+        title="Pro Plan"
+        price="$19.99 / month"
+        cta-text="Buy Now"
+        features="10 GB Storage, Priority Support, Advanced Analytics, Team Access">
+      </pricing-card>
+    </div>
+  </div>
+
+  <script type="module">
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <style>
+        :host {
+          display: block;
+          max-width: 420px;
+          --pc-bg: #ffffff;
+          --pc-title: #0f172a;
+          --pc-price: #0a7a2f;
+          --pc-divider: #e5e7eb;
+          --pc-check: #0a7a2f;
+          --pc-primary: #2563eb;
+          --pc-primary-hover: #1d4ed8;
+          --pc-radius: 12px;
+          --pc-shadow: 0 8px 22px rgba(2, 6, 23, 0.08);
+        }
+        article.card {
+          width: 100%;
+          margin: 8px auto;
+          background: var(--pc-bg);
+          color: var(--pc-title);
+          border-radius: var(--pc-radius);
+          box-shadow: var(--pc-shadow);
+          padding: 16px;
+        }
+        h2.title {
+          margin: 0 0 6px;
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+        p.price {
+          margin: 0 0 12px;
+          font-size: 1.125rem;
+          color: var(--pc-price);
+          font-weight: 600;
+        }
+        ul.features { list-style: none; margin: 0; padding: 0; }
+        ul.features li {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 8px 0;
+          border-bottom: 1px solid var(--pc-divider);
+        }
+        ul.features li:last-child { border-bottom: 0; }
+        ul.features li::before {
+          content: "✓";
+          color: var(--pc-check);
+          font-weight: 700;
+          line-height: 1.2;
+        }
+        button.btn {
+          width: 100%;
+          margin-top: 12px;
+          appearance: none;
+          -webkit-appearance: none;
+          background: var(--pc-primary);
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          padding: 12px 16px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        button.btn:hover { background: var(--pc-primary-hover); }
+        button.btn:focus { outline: 3px solid #93c5fd; outline-offset: 2px; }
+        @media (min-width: 640px) {
+          h2.title { font-size: 1.5rem; }
+          p.price { font-size: 1.25rem; }
+        }
+      </style>
+      <article class="card" part="card">
+        <h2 class="title" part="title"></h2>
+        <p class="price" part="price"></p>
+        <ul class="features" part="features"></ul>
+        <button class="btn" part="button" type="button"></button>
+      </article>
+    `;
+
+    class PricingCard extends HTMLElement {
+      static get observedAttributes() {
+        return ['title', 'price', 'cta-text', 'features'];
+      }
+
+      constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.onButtonClick = this.onButtonClick.bind(this);
+      }
+
+      connectedCallback() {
+        this.render();
+        this.shadowRoot.querySelector('button.btn')
+          .addEventListener('click', this.onButtonClick);
+      }
+
+      disconnectedCallback() {
+        this.shadowRoot.querySelector('button.btn')
+          .removeEventListener('click', this.onButtonClick);
+      }
+
+      attributeChangedCallback() {
+        this.render();
+      }
+
+      get featuresList() {
+        const attr = this.getAttribute('features');
+        if (!attr) return [];
+        try {
+          const parsed = JSON.parse(attr);
+          if (Array.isArray(parsed)) return parsed.map(String);
+        } catch (e) {
+          // Fallback: comma-separated
+        }
+        return attr.split(',').map(s => s.trim()).filter(Boolean);
+      }
+
+      render() {
+        const title = this.getAttribute('title') || '';
+        const price = this.getAttribute('price') || '';
+        const cta = this.getAttribute('cta-text') || 'Choose Plan';
+
+        this.shadowRoot.querySelector('.title').textContent = title;
+        this.shadowRoot.querySelector('.price').textContent = price;
+
+        const list = this.shadowRoot.querySelector('.features');
+        list.innerHTML = '';
+        for (const text of this.featuresList) {
+          const li = document.createElement('li');
+          li.textContent = String(text);
+          list.appendChild(li);
+        }
+
+        const btn = this.shadowRoot.querySelector('.btn');
+        btn.textContent = cta;
+        btn.setAttribute('aria-label', `${cta}: ${title} at ${price}`);
+      }
+
+      onButtonClick() {
+        const detail = {
+          title: this.getAttribute('title') || '',
+          price: this.getAttribute('price') || '',
+          features: this.featuresList,
+        };
+        this.dispatchEvent(new CustomEvent('pricing-card:cta', {
+          detail,
+          bubbles: true,
+          composed: true,
+        }));
+      }
+    }
+
+    customElements.define('pricing-card', PricingCard);
+
+    // Optional helper for programmatic creation: Card({ title, price, features, ctaText, onClick })
+    window.Card = function Card({ title, price, features, ctaText = 'Choose Plan', onClick }) {
+      const el = document.createElement('pricing-card');
+      if (title) el.setAttribute('title', title);
+      if (price) el.setAttribute('price', price);
+      if (ctaText) el.setAttribute('cta-text', ctaText);
+      if (features) el.setAttribute('features', JSON.stringify(features));
+      if (typeof onClick === 'function') {
+        el.addEventListener('pricing-card:cta', onClick);
+      }
+      return el;
+    };
+
+    // Wire up CTA events for demo
+    document.getElementById('basic')
+      .addEventListener('pricing-card:cta', (e) => {
+        console.log('CTA clicked (basic):', e.detail);
+        alert(`Starting trial for ${e.detail.title} at ${e.detail.price}`);
+      });
+
+    document.getElementById('pro')
+      .addEventListener('pricing-card:cta', (e) => {
+        console.log('CTA clicked (pro):', e.detail);
+        alert(`Buying ${e.detail.title} at ${e.detail.price}`);
+      });
+
+    // Example: programmatic creation
+    const app = document.getElementById('app');
+    const enterprise = window.Card({
+      title: 'Enterprise',
+      price: 'Custom pricing',
+      features: [
+        'Unlimited Storage',
+        'Dedicated Success Manager',
+        'SAML SSO',
+        'Uptime SLA'
+      ],
+      ctaText: 'Contact Sales',
+      onClick: (e) => {
+        console.log('CTA clicked (enterprise):', e.detail);
+        alert('Our team will contact you shortly.');
+      }
+    });
+    app.appendChild(enterprise);
+  </script>
+</body>
+</html>
