@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Pricing Card Component</title>
+	<style>
+		:root {
+			--card-max-width: 360px;
+			--card-bg: #ffffff;
+			--card-radius: 12px;
+			--card-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+			--text-color: #1f2937;
+			--muted-color: #6b7280;
+			--accent: #2563eb;
+			--accent-hover: #1e40af;
+			--success: #10b981;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+			background: #f8fafc;
+			color: var(--text-color);
+			display: grid;
+			place-items: center;
+			min-height: 100vh;
+			padding: 24px;
+		}
+
+		.pricing-card {
+			width: 100%;
+			max-width: var(--card-max-width);
+			margin: 0 auto;
+			background-color: var(--card-bg);
+			border-radius: var(--card-radius);
+			box-shadow: var(--card-shadow);
+			padding: 20px 20px 24px;
+			text-align: left;
+		}
+
+		.pricing-card .title {
+			margin: 0 0 6px;
+			font-size: 22px;
+			font-weight: 700;
+		}
+
+		.pricing-card .price {
+			margin: 0 0 14px;
+			font-size: 20px;
+			color: var(--success);
+		}
+
+		.pricing-card .features {
+			list-style: none;
+			padding-left: 0;
+			margin: 0 0 16px;
+		}
+
+		.pricing-card .features li {
+			padding: 8px 0;
+			border-bottom: 1px solid #eef2f7;
+		}
+
+		.pricing-card .features li:last-child {
+			border-bottom: 0;
+		}
+
+		.pricing-card .btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			background: var(--accent);
+			color: #ffffff;
+			padding: 10px 16px;
+			border: none;
+			border-radius: 8px;
+			margin-top: 6px;
+			cursor: pointer;
+			font-weight: 600;
+			text-decoration: none;
+		}
+
+		.pricing-card .btn:hover {
+			background: var(--accent-hover);
+		}
+
+		.pricing-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 16px;
+			width: 100%;
+			max-width: 1100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="pricing-grid" id="grid"></div>
+
+	<script>
+		function createPricingCard(options) {
+			const { title, price, features, ctaLabel = "Start Trial", onClick } = options;
+
+			const card = document.createElement("div");
+			card.className = "pricing-card";
+
+			const titleEl = document.createElement("h2");
+			titleEl.className = "title";
+			titleEl.textContent = title;
+
+			const priceEl = document.createElement("p");
+			priceEl.className = "price";
+			priceEl.textContent = price;
+
+			const listEl = document.createElement("ul");
+			listEl.className = "features";
+			features.forEach(function(feature) {
+				const li = document.createElement("li");
+				li.textContent = feature;
+				listEl.appendChild(li);
+			});
+
+			const buttonEl = document.createElement("button");
+			buttonEl.className = "btn";
+			buttonEl.type = "button";
+			buttonEl.textContent = ctaLabel;
+			buttonEl.addEventListener("click", function() {
+				if (typeof onClick === "function") {
+					onClick({ title: title, price: price });
+				} else {
+					alert("Selected: " + title + " — " + price);
+				}
+			});
+
+			card.appendChild(titleEl);
+			card.appendChild(priceEl);
+			card.appendChild(listEl);
+			card.appendChild(buttonEl);
+
+			return card;
+		}
+
+		const grid = document.getElementById("grid");
+		const plans = [
+			{ title: "Basic Plan", price: "$9.99 / month", features: ["1 GB Storage", "Basic Support", "All Core Features"] },
+			{ title: "Pro Plan", price: "$19.99 / month", features: ["10 GB Storage", "Priority Support", "Advanced Analytics"] },
+			{ title: "Enterprise", price: "Contact Sales", features: ["Unlimited Storage", "Dedicated Support", "Custom SLAs"] }
+		];
+
+		plans.forEach(function(plan) {
+			const card = createPricingCard({
+				title: plan.title,
+				price: plan.price,
+				features: plan.features,
+				onClick: function(meta) {
+					console.log("CTA clicked:", meta);
+				}
+			});
+			grid.appendChild(card);
+		});
+	</script>
+</body>
+</html>
