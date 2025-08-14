@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Pricing Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .pricing {
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Fixed: was box-shdow */
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center; /* Changed from left to center for better design */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2563eb; /* Changed from green to professional blue */
+            margin: 0 0 25px 0;
+        }
+
+        .price .currency {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .price .period {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .features {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 0 30px 0;
+            text-align: left;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer; /* Added missing cursor pointer */
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .pricing {
+                margin: 0 15px;
+                padding: 25px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+            
+            .price {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="pricing">
+    <h2 class="title">Basic Plan</h2> <!-- Fixed: was <h2 class="title">Basic Plan<h2> -->
+    <p class="price">
+        <span class="currency">$</span>9.99 
+        <span class="period">/month</span>
+    </p>
+
+    <ul class="features">
+        <li>1 GB Storage</li>
+        <li>Basic Support</li>
+        <li>All Core Features</li>
+    </ul>
+
+    <button class="btn">Start Trial</button>
+</div>
+
+</body>
+</html>
