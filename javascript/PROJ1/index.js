@@ -397,9 +397,16 @@
 // }
 // greeting()
 
-function greet(name) {
-    return `Hello, ${name}`;
-  }
+// function greet(name) {
+//     return `Hello, ${name}`;
+//   }
   
-  console.log(greet("Jenny")); // Output: Hello, Jenny
+//   console.log(greet("Jenny")); // Output: Hello, Jenny
   
+// const age = "18"
+// if (age === "18") {
+//   console.log("Adult");
+// } else{
+//   console.log("Minor");
+  
+// }

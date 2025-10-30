@@ -79,7 +79,7 @@ text {
 
 .leaf1 {
     margin: 0 0 0 30cm;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .con {
@@ -156,7 +156,7 @@ text {
 }
 
 .card {
-    margin: 4cm 2cm;
+    margin: 4cm 2cm !important;
     width: 11rem;
     border-radius: 30px 10px;
     background: none !important;
